@@ -3,8 +3,13 @@ class GildedRose
     @items = items
   end
 
-  def update_quality
+  def update_quality()
     @items.each do |item|
+      update_item(item)
+    end
+  end
+
+  def update_item(item)
       if item.name != "Aged Brie" && item.name != "Backstage passes to a TAFKAL80ETC concert"
         if item.quality > 0
           if item.name != "Sulfuras, Hand of Ragnaros"
@@ -49,5 +54,4 @@ class GildedRose
         end
       end
     end
-  end
 end
