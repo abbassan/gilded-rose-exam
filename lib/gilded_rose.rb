@@ -14,10 +14,6 @@ class GildedRose
       if item.name != "Sulfuras, Hand of Ragnaros"
         decrease_quality(item)
       end
-      if item.name == "Conjured Mana Cake"
-        decrease_quality(item)
-        decrease_quality(item)
-      end
       else
         increase_quality(item)
       if item.name == "Backstage passes to a TAFKAL80ETC concert"
@@ -27,6 +23,10 @@ class GildedRose
         if item.sell_in < 6
           increase_quality(item)
         end
+      end
+      if item.name == "Conjured Mana Cake"
+        decrease_quality(item)
+        decrease_quality(item)
       end
     end
     if item.name != "Sulfuras, Hand of Ragnaros"
